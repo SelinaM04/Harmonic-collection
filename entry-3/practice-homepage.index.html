@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Yoga Practice</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 25px;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181; 
+  display: block;
+  transition: 0.3s;
+  right: 28px;
+  
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+  
+}
+
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+a {
+  color: #585656;
+  font-size: 16px;
+}
+
+
+header {
+  font-size: 30px;
+    padding-top: 5%;
+}
+
+p {
+line-height: 1.6;
+    color: hsl(0, 1%, 28%);
+   
+            
+}
+
+
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-caption{
+  background-color: rgba(200, 162, 132, 0.8); 
+  z-index: 11px;
+  color: #5f5d5d;
+}
+
+.carousel-control-prev{
+  top: 70%;
+  margin-left: 20%;
+}
+
+.carousel-control-next{
+  top: 70%!;
+  margin-right: 20%;
+}
+
+
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 40%;
+    left: 0%;
+    top: 25%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: hsl(0, 4%, 37%);
+    text-align: center;
+  }
+
+  .line {
+    padding: 2%;
+    border-left: 2px solid #565353;
+    margin-left: 30%;
+    text-align: left;
+  }
+
+.main a {
+  width: 30%;
+  height: 25%;
+}
+
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+
+
+.second.row {
+  margin-left: 0px!;
+  margin-right: 0px;
+}
+
+
+ button {
+      margin-left: 40%;
+      background-color: #D36F6F;
+      color: white;
+      padding: 2% 9% 2% 9%;
+}
+
+
+.photo{
+  display: inline-block;
+position: relative;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div id="sliding" class="carousel slide" data-ride="carousel">
+            <ul class="carousel-indicators">
+                <!-- Add your carousel indicators here if needed -->
+            </ul>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="image/sunset2.gif">
+                    <div class="carousel-caption">
+                        <div class="line">
+                            <div id="mySidenav" class="sidenav">
+                                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                                <a href="https://youtu.be/fkosqC5F-rw?si=cODOF3ZYsRlRC8O5">Day 1</a>
+                                <a href="https://youtu.be/byaVOCanRaQ?si=AYm0DZ83M1JUWwxc">Day 2</a>
+                                <a href="https://youtu.be/jkZjRY3-_fs?si=B9Bp_bAeSdIOTU2p">Day 3</a>
+                                <a href="https://youtu.be/T5ojxOlmWi8?si=5W8GJTKSiUF74EYC">Day 4</a>
+                                <a href="https://youtu.be/XumeUQpaXVs?si=IZ5mI1Su8SsGHRER">Day 5</a>
+                                <a href="https://youtu.be/FUil-zrJHyM?si=s0yGrtZHX8SqWH9F">Day 6</a>
+                                <a href="https://youtu.be/v423FmUeP7g?si=MYjzPB5sMKVUDaSX">Day 7</a>
+                            </div>
+
+                            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+                            <script>
+                                function openNav() {
+                                    document.getElementById("mySidenav").style.width = "250px";
+                                }
+
+                                function closeNav() {
+                                    document.getElementById("mySidenav").style.width = "0";
+                                }
+                            </script>
+                            <h1>Yoga Practice</h1>
+                            <p>Enhance Energy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
