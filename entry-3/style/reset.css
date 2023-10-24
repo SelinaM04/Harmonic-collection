@@ -1,100 +1,147 @@
-/***
-    The new CSS reset - version 1.9 (last updated 19.6.2023)
-    GitHub page: https://github.com/elad2412/the-new-css-reset
-***/
-
-/*
-    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
-    - The "symbol *" part is to solve Firefox SVG sprite bug
-    - The "html" element is excluded, otherwise a bug in Chrome breaks the CSS hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
- */
- *:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
-    all: unset;
-    display: revert;
+body {
+font-family: "Lato", sans-serif;
 }
 
-/* Preferred box-sizing value */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
+.sidenav {
+height: 100%;
+width: 0;
+position: fixed;
+z-index: 1;
+top: 0;
+right: 25px;
+background-color: #111;
+overflow-x: hidden;
+transition: 0.5s;
+padding-top: 60px;
+
 }
 
-/* Reapply the pointer cursor for anchor tags */
-a, button {
-    cursor: revert;
+.sidenav a {
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-size: 25px;
+color: #818181; 
+display: block;
+transition: 0.3s;
+right: 28px;
+
 }
 
-/* Remove list styles (bullets/numbers) */
-ol, ul, menu {
-    list-style: none;
+.sidenav a:hover {
+color: #f1f1f1;
 }
 
-/* For images to not be able to exceed their container */
+.sidenav .closebtn {
+position: absolute;
+top: 0;
+right: 25px;
+font-size: 36px;
+margin-left: 50px;
+
+}
+
+@media screen and (max-height: 450px) {
+.sidenav {padding-top: 15px;}
+.sidenav a {font-size: 18px;}
+
+}
+
+.top-right {
+position: absolute;
+top: 8px;
+right: 16px;
+}
+
+a {
+color: #585656;
+font-size: 16px;
+}
+
+
+header {
+font-size: 30px;
+padding-top: 5%;
+}
+
+p {
+line-height: 1.6;
+color: hsl(0, 1%, 28%);
+
+    
+}
+
+
+.carousel-inner img {
+width: 100%;
+height: 100%;
+}
+
+.carousel-caption{
+background-color: #dadbdccc; 
+z-index: 11px;
+color: #5f5d5d;
+}
+
+.carousel-control-prev{
+top: 70%;
+margin-left: 20%;
+}
+
+.carousel-control-next{
+top: 70%!;
+margin-right: 20%;
+}
+
+
+.carousel-caption {
+position: absolute;
+right: 15%;
+bottom: 40%;
+left: 0%;
+top: 25%;
+z-index: 10;
+padding-top: 20px;
+padding-bottom: 20px;
+color: hsl(0, 4%, 37%);
+text-align: center;
+}
+
+.line {
+padding: 2%;
+border-left: 2px solid #565353;
+margin-left: 30%;
+text-align: left;
+}
+
+.main a {
+width: 30%;
+height: 25%;
+}
+
+
 img {
-    max-inline-size: 100%;
-    max-block-size: 100%;
+width: 100%;
+height: auto;
 }
 
-/* removes spacing between cells in tables */
-table {
-    border-collapse: collapse;
+
+
+.second.row {
+margin-left: 0px!;
+margin-right: 0px;
 }
 
-/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
-input, textarea {
-    -webkit-user-select: auto;
+
+button {
+margin-left: 40%;
+background-color: #D36F6F;
+color: white;
+padding: 2% 9% 2% 9%;
 }
 
-/* revert the 'white-space' property for textarea elements on Safari */
-textarea {
-    white-space: revert;
+
+.photo{
+display: inline-block;
+position: relative;
 }
 
-/* minimum style to allow to style meter element */
-meter {
-    -webkit-appearance: revert;
-    appearance: revert;
-}
-
-/* preformatted text - use only for this feature */
-:where(pre) {
-    all: revert;
-}
-
-/* reset default text opacity of input placeholder */
-::placeholder {
-    color: unset;
-}
-
-/* remove default dot (•) sign */
-::marker {
-    content: initial;
-}
-
-/* fix the feature of 'hidden' attribute.
-   display:revert; revert to element instead of attribute */
-:where([hidden]) {
-    display: none;
-}
-
-/* revert for bug in Chromium browsers
-   - fix for the content editable attribute will work properly.
-   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
-:where([contenteditable]:not([contenteditable="false"])) {
-    -moz-user-modify: read-write;
-    -webkit-user-modify: read-write;
-    overflow-wrap: break-word;
-    -webkit-line-break: after-white-space;
-    -webkit-user-select: auto;
-}
-
-/* apply back the draggable feature - exist only in Chromium and Safari */
-:where([draggable="true"]) {
-    -webkit-user-drag: element;
-}
-
-/* Revert Modal native behavior */
-:where(dialog:modal) {
-    all: revert;
-}

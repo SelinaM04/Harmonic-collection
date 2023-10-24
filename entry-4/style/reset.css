@@ -5,9 +5,14 @@ body {
   font-size: 18px;
   color: #9FB0CF;
   line-height: 1.5;
-  background-color: #fff;
+  background-image: url(../img/1.jpg);
+  background-size: cover;
+  background-size: auto;
+  background-repeat: repeat;
  
 }
+
+
 
 h1 { font-size: 80px; }
 h2 { font-size: 32px; }
@@ -39,7 +44,7 @@ a {
   right: 0;
   width: 26%;
   height: 100%;
-  background-color: rgb(201, 173, 181);
+  background-color: hsl(30, 5%, 61%);
   overflow-y: auto;
   z-index: 1;
   display: -webkit-box;
@@ -163,27 +168,22 @@ a {
 .banner-section {
   position: relative;
   text-align: center;
-  background-color: #9FB0CF;
   padding-top: 121px;
   align-items: flex-start;
 }
 
-.parallax {
-  background-image: url("https://ibb.co/mcdDFNB");
-  min-height: 500px; 
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+.bg-blue-transparent { 
+  background-color: hwb(218 82% 8%);
+  opacity: 0.4;
+  
+ }
 
-.bg-blue-transparent { background-color: #9FB0CF; }
 
 .banner-section .logo-fa {  
-  color: #E8E9D5;
+  color: #000000;
   max-width: 400px;
   margin-left: 5px;
-  padding-top: 43px;
+  padding-top: 45px;
   padding-bottom: 35px;
   font-size: 32px;
   margin-bottom: 60px;
@@ -196,7 +196,7 @@ a {
 @media (max-width: 767px) {
   .banner-section .logo-fa {
     font-size: 28px;
-    padding-top: 20px;
+    padding-top: 50px;
     padding-bottom: 15px;
   }
 }
@@ -216,7 +216,7 @@ a {
 }
 
 .banner-section .simple {
-  color: #E8E9D5;
+  color: hsl(0, 0%, 0%);
   display: inline-block;
   margin: auto;
   margin-left: 97px;
@@ -245,10 +245,10 @@ a {
 }
 
 .work-section {
-  padding-top: 280px!important;
+  padding-top: 310px!important;
   padding-bottom: 90px!important;
   min-height: 850px;
-  background-color: #9FB0CF;
+  background-color: hsl(216, 3%, 70%);
    
 }
 
@@ -266,11 +266,11 @@ a {
 @media (max-width: 767px) {
   .work-section .item {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
   }
 }
 
-.work-section .item.one { margin-top: 30px;}
+.work-section .item.one { margin-top: 20px;}
 
 @media (max-width: 767px) {
   .work-section .item.one { margin-top: 0;}
@@ -283,7 +283,7 @@ a {
 
 .work-section .item .icn {
   width: 119px;
-  height: 110px;
+  height: 200px;
   display: block;
   border: 1px solid #E8E9D5;
   border-radius: 100%;
@@ -366,7 +366,7 @@ a {
 }
 
 .map-section {
-  background-color: #9FB0CF;
+  background-color: hsl(216, 3%, 70%);
   flex-direction: column;
   justify-content: center;
 }
