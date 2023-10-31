@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/reset.css">
+    <title>Pilates Bingo</title>
+</head>
+<body>
+    
+        <nav>
+            <ul>
+                <li><a href="../entry-6/index.html">Home</a></li>
+                <li><a href="../entry-5/index.html">Previous</a></li>
+                <li><a href="">Next</a></li>
+            </ul>
+        </nav>
+     
+
+    <p class="intro">Discover your Pilates personality by answering these questions!</p>
+
+    <div class="quiz-container">
+                <form id="pilates-quiz">
+          
+            <div class="quiz-question">
+                <p>How often do you practice Pilates?</p>
+                <label><input type="radio" name="q1" value="a"> Daily</label>
+                <label><input type="radio" name="q1" value="b"> A few times a week</label>
+                <label><input type="radio" name="q1" value="c"> Occasionally</label>
+                <label><input type="radio" name="q1" value="d"> Just getting started</label>
+            </div>
+           
+             <div class="quiz-question">
+                 <p>Which Pilates principle do you focus on the most?</p>
+                 <label><input type="radio" name="q2" value="a"> Control</label>
+                 <label><input type="radio" name="q2" value="b"> Precision</label>
+                 <label><input type="radio" name="q2" value="c"> Centering</label>
+                 <label><input type="radio" name="q2" value="d"> I'm not sure yet</label>
+            </div>
+
+
+             <div class="quiz-question">
+                 <p>How do you prefer to learn new Pilates exercises?</p>
+                 <label><input type="radio" name="q3" value="a"> In a professional studio with an instructor</label>
+                 <label><input type="radio" name="q3" value="b"> Through online classes</label>
+                 <label><input type="radio" name="q3" value="c"> Using Pilates books and manuals</label>
+                 <label><input type="radio" name="q3" value="d"> I like to stick with what I know</label>
+            </div>
+
+
+            <div class="quiz-question">
+                <p>What's your favorite type of Pilates workout?</p>
+                <label><input type="radio" name="q4" value="a"> High-Intensity Pilates</label>
+                <label><input type="radio" name="q4" value="b"> Classical Pilates</label>
+                <label><input type="radio" name="q4" value="c"> Pilates for rehabilitation</label>
+                <label><input type="radio" name="q4" value="d"> Pilates with props and equipment</label>
+            </div>
+
+
+            <div class="quiz-question">
+                <p>What is your main goal with Pilates?</p>
+                <label><input type="radio" name="q5" value="a"> Build muscle and strength</label>
+                <label><input type="radio" name="q5" value="b"> Increase flexibility and mobility</label>
+                <label><input type="radio" name="q5" value="c"> Improve posture and alignment</label>
+                <label><input type="radio" name="q5" value="d"> Just for fun and relaxation</label>
+            </div>
+
+
+            <div class="quiz-question">
+                    <p>Have you ever used a Pilates reformer?</p>
+                    <label><input type="radio" name="q6" value="a"> Yes, I use it regularly</label>
+                    <label><input type="radio" name="q6" value="b"> A few times, but I prefer mat Pilates</label>
+                    <label><input type="radio" name="q6" value="c"> No, but I'm interested in trying it</label>
+                    <label><input type="radio" name="q6" value="d"> No, and I'm not interested</label>
+            </div>
+
+
+            <div class="quiz-question">
+                <p>How do you approach a challenging Pilates move?</p>
+                <label><input type="radio" name="q7" value="a"> With enthusiasm, I love a challenge!</label>
+                <label><input type="radio" name="q7" value="b"> With caution, but I'll give it a try</label>
+                <label><input type="radio" name="q7" value="c"> I'll ask for modifications</label>
+                <label><input type="radio" name="q7" value="d"> I'd rather stick to moves I'm comfortable with</label>
+            </div>
+
+
+            <div class="quiz-question">
+                <p>When it comes to Pilates, what describes you best?</p>
+                <label><input type="radio" name="q8" value="a"> I'm a certified Pilates instructor</label>
+                <label><input type="radio" name="q8" value="b"> A dedicated Pilates student</label>
+                <label><input type="radio" name="q8" value="c"> A casual Pilates class attendee</label>
+                <label><input type="radio" name="q8" value="d"> New to the Pilates world</label>
+            </div>
+
+
+            <div class="quiz-question">
+                <p>What's your go-to Pilates move?</p>
+                <label><input type="radio" name="q9" value="a"> The Teaser</label>
+                <label><input type="radio" name="q9" value="b"> The Hundred</label>
+                <label><input type="radio" name="q9" value="c"> The Mermaid Stretch</label>
+                <label><input type="radio" name="q9" value="d"> I'm still learning the moves</label>
+            </div>
+
+
+            <div class="quiz-question">
+                <p>When you can't attend a Pilates class, what do you do?</p>
+                <label><input type="radio" name="q10" value="a"> I practice at home with my own equipment</label>
+                <label><input type="radio" name="q10" value="b"> I take a day off and rest</label>
+                <label><input type="radio" name="q10" value="c"> I find an online class or app to follow</label>
+                <label><input type="radio" name="q10" value="d"> I do some other form of exercise</label>
+            </div>
+
+            
+            <button type="button" id="submit-quiz">Submit</button>
+        </form>
+        <div id="quiz-result"></div>
+        </div>
+
+        <script>
+            document.getElementById('submit-quiz').addEventListener('click', function() {
+        const form = document.forms['pilates-quiz'];
+        let score = 0;
+        let totalQuestions = 10;
+    
+        
+        for (let i = 1; i <= totalQuestions; i++) {
+            let answer = form['q' + i].value;
+            if (answer === 'a') score += 4;
+            else if (answer === 'b') score += 3;
+            else if (answer === 'c') score += 2;
+            else if (answer === 'd') score += 1;
+        }
+    
+        
+        let resultText = "";
+        if (score >= 35) resultText = "You're a Pilates Pro! 🌟 Your practice shines like the Sun, a symbol of energy and strength in Pilates. You've mastered the core principles, embodying control and precision. Consider sharing your radiant energy by teaching others, or explore advanced techniques to further enrich your practice.";
+        else if (score >= 26) resultText = "You're a Pilates Enthusiast! 🌿 Your practice is like a growing plant, symbolizing development and progress. Keep nurturing your practice with consistent workouts, and explore various apparatuses and styles to blossom into a Pilates Pro.";
+        else if (score >= 17) resultText = "You're Exploring the Pilates World! 🌍 Your journey is like a river, a symbol of exploration and finding your own path in the Pilates landscape. Keep flowing, try different classes and exercises, and you'll find your rhythm and direction.";
+        else resultText = "You're a Pilates Newcomer! 🌱 Your practice is a seed, symbolizing potential and the beginning of your Pilates journey. Water your practice with dedication and curiosity, and watch your Pilates journey grow! Focus on foundational exercises and principles to build a strong base.";
+    
+        
+        document.getElementById('quiz-result').innerHTML = `<h2>Your Result:</h2><p>${resultText}</p>`;
+    });
+    
+        </script>
+          
+    </div>
+
+  
+<div class="share-comments">
+    <h2>Share Your Results!</h2>
+    <p>Remember to share the result and a photo of you practicing Pilates with us!</p>
+    
+    <div class="social-media">
+        <button>Share on Facebook</button>
+        <button>Share on Twitter</button>
+        <button>Share on Instagram</button>
+    </div>
+    
+    <div class="comment-form">
+        <h3>Leave a Comment:</h3>
+        <form>
+            <textarea placeholder="Write your comment here..."></textarea>
+            <button type="submit">Post Comment</button>
+        </form>
+    </div>
+</div>
+
+    
+</body>
+</html>
