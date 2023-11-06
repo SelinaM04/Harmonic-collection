@@ -4,33 +4,24 @@ body {
     background: url('../img/1.jpg') no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
-    overflow: hidden; /* Prevent scrolling if items are placed outside the viewport */
-}
+    overflow: hidden; 
 
-
-/* ... other styles ... */
-
-/* Corrected the CSS selector and modified the positioning */
 .main-content h1 {
     color: rgb(74, 71, 71);
     text-align: center;
-    opacity: 0; /* Start with the title invisible */
-    transition: opacity 1s ease; /* Fade effect over 2 seconds */
-    position: absolute; /* Changed from relative to absolute */
+    opacity: 0; 
+    transition: opacity 1s ease; 
+    position: absolute; 
     top: 46%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Center the title */
+    transform: translate(-50%, -50%); 
     text-indent: 0.3px;
 }
 
-/* ... other styles ... */
-
-
-
 #navigation {
-    position: relative; /* Set a context for absolute positioning of child elements */
+    position: relative; 
     width: 100%;
-    height: 100vh; /* Full viewport height */
+    height: 100vh; 
 }
 
 #navigation ul {
@@ -43,12 +34,11 @@ body {
     background-color: rgba(255, 255, 255, 0.5);
     border: 1px solid black;
     padding: 50px 90px;
-    position: absolute; /* Absolutely position each navigation item */
-    opacity: 0; /* Start with items invisible */
-    transition: opacity 1s ease; /* Fade effect over 1 second */
+    position: absolute; 
+    opacity: 0; 
+    transition: opacity 1s ease; 
 }
 
-/* Position each item using 'top' and 'left' or 'right' properties */
 #navigation li:nth-child(1) {
     top: 20px;
     left: 20px;
@@ -57,7 +47,7 @@ body {
 #navigation li:nth-child(2) {
     top: 80px;
     left: 50%;
-    transform: translateX(-50%); /* Center align the item horizontally */
+    transform: translateX(-50%); 
 }
 
 #navigation li:nth-child(3) {
@@ -68,7 +58,7 @@ body {
 #navigation li:nth-child(4) {
     top: 50%;
     left: 30px;
-    transform: translateY(-50%); /* Center align the item vertically */
+    transform: translateY(-50%); 
 }
 
 #navigation li:nth-child(5) {
@@ -91,7 +81,55 @@ body {
     text-decoration: none;
     color: black;
     font-weight: bold;
-    display: block; /* Make the link fill the li for easier clicking */
+    display: block; 
 }
 
-/* ... Other styles remain unchanged ... */
+}
+
+@media (max-width: 768px) {
+    .main-content h1 {
+        font-size: 24px; 
+        padding: 0 20px; 
+    }
+
+    #navigation li {
+        padding: 20px 40px; 
+    }
+
+    #navigation li:nth-child(2), 
+    #navigation li:nth-child(4), 
+    #navigation li:nth-child(5), 
+    #navigation li:nth-child(6) {
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%); 
+        top: auto; 
+        bottom: auto; 
+    }
+
+    #navigation li:nth-child(1), #navigation li:nth-child(3), #navigation li:nth-child(7) {
+        left: 50%;
+        transform: translateX(-50%); 
+    }
+}
+
+@media (max-width: 480px) {
+    .main-content h1 {
+        font-size: 18px; 
+    }
+
+    #navigation li {
+        padding: 10px 20px; 
+    }
+
+    #navigation ul {
+        display: block; 
+    }
+
+    #navigation li {
+        position: static; 
+        margin-bottom: 10px; 
+        width: calc(100% - 40px); 
+        transform: none; 
+    }
+}
+
