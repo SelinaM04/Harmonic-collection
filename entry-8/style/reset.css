@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url('../img/1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden; /* Prevent scrolling if items are placed outside the viewport */
+}
+
+
+/* ... other styles ... */
+
+/* Corrected the CSS selector and modified the positioning */
+.main-content h1 {
+    color: rgb(74, 71, 71);
+    text-align: center;
+    opacity: 0; /* Start with the title invisible */
+    transition: opacity 1s ease; /* Fade effect over 2 seconds */
+    position: absolute; /* Changed from relative to absolute */
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the title */
+    text-indent: 0.3px;
+}
+
+/* ... other styles ... */
+
+
+
+#navigation {
+    position: relative; /* Set a context for absolute positioning of child elements */
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+}
+
+#navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#navigation li {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid black;
+    padding: 50px 90px;
+    position: absolute; /* Absolutely position each navigation item */
+    opacity: 0; /* Start with items invisible */
+    transition: opacity 1s ease; /* Fade effect over 1 second */
+}
+
+/* Position each item using 'top' and 'left' or 'right' properties */
+#navigation li:nth-child(1) {
+    top: 20px;
+    left: 20px;
+}
+
+#navigation li:nth-child(2) {
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%); /* Center align the item horizontally */
+}
+
+#navigation li:nth-child(3) {
+    bottom: 20px;
+    right: 20px;
+}
+
+#navigation li:nth-child(4) {
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%); /* Center align the item vertically */
+}
+
+#navigation li:nth-child(5) {
+    top: 75%;
+    left: 300px;
+}
+
+#navigation li:nth-child(6) {
+    top: 300px;
+    right: 200px;
+}
+
+
+#navigation li:nth-child(7) {
+    top: 50px;
+    right: 20px;
+}
+
+#navigation a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    display: block; /* Make the link fill the li for easier clicking */
+}
+
+/* ... Other styles remain unchanged ... */
