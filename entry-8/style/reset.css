@@ -30,6 +30,21 @@ body {
     margin: 0;
 }
 
+#navigation a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease; /
+}
+
+#navigation a:hover {
+    background-color: black; 
+    color: white; 
+
+}
+
+
 #navigation li {
     background-color: rgba(255, 255, 255, 0.5);
     border: 1px solid black;
@@ -37,6 +52,8 @@ body {
     position: absolute; 
     opacity: 0; 
     transition: opacity 1s ease; 
+    font-size: 19px;
+    font-weight: 300;
 }
 
 #navigation li:nth-child(1) {
