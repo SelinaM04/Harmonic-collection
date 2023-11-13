@@ -5,6 +5,7 @@ body {
     background-size: cover;
     height: 100vh;
     overflow: hidden; 
+}
 
 .main-content h1 {
     color: rgb(74, 71, 71);
@@ -17,6 +18,8 @@ body {
     transform: translate(-50%, -50%); 
     text-indent: 0.3px;
 }
+
+
 
 #navigation {
     position: relative; 
@@ -101,7 +104,7 @@ body {
     display: block; 
 }
 
-}
+
 
 @media (max-width: 768px) {
     .main-content h1 {
