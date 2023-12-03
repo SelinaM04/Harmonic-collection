@@ -23,7 +23,7 @@ function setup() {
 }
 
 function goToHomepage() {
-  window.location.href = '../entry-6/index.html'; 
+  window.location.href = '../homepage.html /index.html'; 
 }
 
 

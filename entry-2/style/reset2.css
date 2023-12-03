@@ -39,6 +39,20 @@ color: #ffffff;
 font-weight: Cambria, serif;
 }
 
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+    
+ 
+
+ }
+
+
+a:hover {
+    color: hwb(196 73% 3%);
+  }
 
 
 

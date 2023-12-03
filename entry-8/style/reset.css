@@ -19,8 +19,6 @@ body {
     text-indent: 0.3px;
 }
 
-
-
 #navigation {
     position: relative; 
     width: 100%;
@@ -60,18 +58,18 @@ body {
 }
 
 #navigation li:nth-child(1) {
-    top: 20px;
+    top: -40px;
     left: 20px;
 }
 
 #navigation li:nth-child(2) {
-    top: 80px;
+    top: 30px;
     left: 50%;
     transform: translateX(-50%); 
 }
 
 #navigation li:nth-child(3) {
-    bottom: 20px;
+    bottom: 70px;
     right: 20px;
 }
 
@@ -82,7 +80,7 @@ body {
 }
 
 #navigation li:nth-child(5) {
-    top: 75%;
+    top: 70%;
     left: 300px;
 }
 
@@ -93,7 +91,7 @@ body {
 
 
 #navigation li:nth-child(7) {
-    top: 50px;
+    top: 10px;
     right: 20px;
 }
 
@@ -104,7 +102,22 @@ body {
     display: block; 
 }
 
+.centered-links {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
 
+.centered-links li {
+    display: inline-block;
+    margin: 0 10px; /* Adjust spacing between items */
+}
+
+.centered-links a {
+    text-decoration: none;
+    color: black; /* Adjust link color as needed */
+    font-weight: bold;
+}
 
 @media (max-width: 768px) {
     .main-content h1 {

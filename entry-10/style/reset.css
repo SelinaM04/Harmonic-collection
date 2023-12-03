@@ -8,6 +8,31 @@ body {
     margin: 0; 
 }
 
+.centered-links {
+  position: relative;
+  list-style: none;
+  padding: 0;
+  top: 90px;
+  left: 590px;
+}
+
+.centered-links li {
+  display: inline-block;
+  margin: 0 10px; 
+}
+
+.centered-links a {
+  text-decoration: none;
+  color: black; 
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.centered-links a:hover {
+  color: rgb(163, 136, 108);
+}
+
+
 #word1 {
     font-size: 24px;
     position: absolute;

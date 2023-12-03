@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+    position: relative; /* Needed for positioning the pseudo-element */
+    z-index: 1; /* Ensures that the content is above the pseudo-element */
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../img/1.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    opacity: 0.5; /* Adjust the opacity as needed */
+    z-index: -1; /* Places the pseudo-element behind the content */
+}
+
+.bottom {
+    display: inline-block;
+    background-color: hsl(120, 2%, 56%);
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+marquee {
+    opacity: 0.8; /* Adjust this value as needed */
+}
+
+table {
+    background-color: transparent; /* Makes the table background transparent */
+}
+
+td {
+    background-color: transparent; /* Makes the table cell backgrounds transparent */
+}
+
