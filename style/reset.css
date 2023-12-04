@@ -199,80 +199,88 @@ audio {
 
 @media only screen and (max-width: 768px) {
 
-  .content-wrapper, .content-about, .image, .box, .label, .p, audio, .bottom-line, .bottom-left-button {
+    .content-wrapper, .content-about, .image, .box, .label, .p, audio, .bottom-line, .bottom-left-button {
+    }
+  
+    .image, .image .element {
+        width: 100%;
+        height: auto;
+    }
+  
+    .box .ellipse {
+        width: 50px;
+        height: 50px;
+    }
+  
+    .label .deep-relaxation {
+        font-size: 80px; 
+    }
+  
+    .p {
+        font-size: 30px; 
+    audio {
+        width: 100%;
+    }
+  
+    .bottom-left-button {
+        width: 40px;
+        height: 40px; 
+    }
   }
-
-  .image, .image .element {
-      width: 100%;
-      height: auto;
+  
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+  
+    .image, .image .element {
+        width: 80%;
+        height: auto; 
+    }
+  
+    .label .deep-relaxation {
+        font-size: 80px; 
+    }
+  
+    .p {
+        font-size: 35px; 
+    }
+  
+    audio {
+        width: 90%; 
+    }
+  
+    .bottom-left-button {
+        width: 45px; height: 45px; 
+    }
   }
+  
+  @media only screen and (max-width: 767px) {
+  
+    .image, .image .element {
+        width: 90%; 
+        height: auto;
+    }
+  
+    .label .deep-relaxation {
+        font-size: 60px;
+        top: 70px;
+        right: 0px;
 
-  .box .ellipse {
-      width: 50px;
-      height: 50px;
+    }
+  
+    .p {
+        font-size: 30px; 
+        height: 90%;
+        
+    }
+  
+    audio {
+        width: 50%; 
+        left: 160px;
+    }
+  
+    .bottom-left-button {
+        width: 40px; height: 40px; /
+    }
   }
-
-  .label .deep-relaxation {
-      font-size: 80px; 
   }
-
-  .p {
-      font-size: 30px; 
-  audio {
-      width: 100%;
-  }
-
-  .bottom-left-button {
-      width: 40px;
-      height: 40px; 
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-
-  .image, .image .element {
-      width: 80%;
-      height: auto; 
-  }
-
-  .label .deep-relaxation {
-      font-size: 80px; 
-  }
-
-  .p {
-      font-size: 35px; 
-  }
-
-  audio {
-      width: 90%; 
-  }
-
-  .bottom-left-button {
-      width: 45px; height: 45px; 
-  }
-}
-
-@media only screen and (max-width: 767px) {
-
-  .image, .image .element {
-      width: 100%; 
-      height: auto;
-  }
-
-  .label .deep-relaxation {
-      font-size: 50px; 
-  }
-
-  .p {
-      font-size: 25px; 
-  }
-
-  audio {
-      width: 100%; 
-  }
-
-  .bottom-left-button {
-      width: 40px; height: 40px; /
-  }
-}
-}
+  
+  

@@ -121,19 +121,18 @@ body {
 
 @media only screen and (min-width: 1024px) and (max-width: 1366px) {
     .main-content h1 {
-        font-size: 18px; /* Adjust font size */
+        font-size: 18px; 
     }
 
     #navigation li {
-        padding: 40px 70px; /* Adjust padding */
-        font-size: 17px; /* Adjust font size */
+        padding: 40px 70px;
+        font-size: 17px; 
     }
 
     .centered-links a {
-        font-size: 18px; /* Adjust font size */
+        font-size: 18px; 
     }
 
-    /* Other elements can also be adjusted similarly */
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -150,7 +149,6 @@ body {
         font-size: 16px;
     }
 
-    /* Further adjustments as needed */
 }
 
 @media only screen and (max-width: 768px) {
@@ -167,7 +165,6 @@ body {
         font-size: 14px;
     }
 
-    /* Adjustments for smaller screen */
 }
 
 
