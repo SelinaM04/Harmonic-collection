@@ -121,6 +121,7 @@ hr {
     letter-spacing: 6px;
     line-height: normal;
     text-indent: 30px;
+    color: hsl(0, 7%, 6%); 
   }
 
 
@@ -152,14 +153,16 @@ audio {
     margin-left: 250px;  
 }
 
- .p a:visited{
-    color: hsl(0, 9%, 2%);
-    text-decoration: none;
+.p a, .p a:visited {
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: block;
+  color: hsl(0, 7%, 6%); /* Set the color for normal and visited states */
 }
 
 .p a:hover {
-    text-decoration: none;
-    color:hwb(34 33% 45%)
+  text-decoration: none;
+  color: hwb(34 33% 45%); /* Color on hover */
 }
 
   
@@ -194,73 +197,82 @@ audio {
     
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
+
   .content-wrapper, .content-about, .image, .box, .label, .p, audio, .bottom-line, .bottom-left-button {
-      width: 100%; 
-      padding: 0; 
-      margin: 0; 
-      left: 0; 
-      right: 0; 
-      top: auto; 
-      bottom: auto; 
-      position: relative; 
   }
 
-  .content-wrapper::before {
-      display: none; 
+  .image, .image .element {
+      width: 100%;
+      height: auto;
   }
 
-  .content-about a, .p a, .label .deep-relaxation, .bottom-left-button {
-      font-size: smaller; 
+  .box .ellipse {
+      width: 50px;
+      height: 50px;
+  }
+
+  .label .deep-relaxation {
+      font-size: 80px; 
+  }
+
+  .p {
+      font-size: 30px; 
+  audio {
+      width: 100%;
+  }
+
+  .bottom-left-button {
+      width: 40px;
+      height: 40px; 
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+  .image, .image .element {
+      width: 80%;
+      height: auto; 
+  }
+
+  .label .deep-relaxation {
+      font-size: 80px; 
+  }
+
+  .p {
+      font-size: 35px; 
   }
 
   audio {
-      width: 100%;
-      bottom: 0; 
+      width: 90%; 
   }
 
-  .image .element, .box .ellipse {
-      width: 100%;
-      height: auto; 
-      position: relative; 
+  .bottom-left-button {
+      width: 45px; height: 45px; 
   }
 }
 
-@media (max-width: 480px) {
-  @media (max-width: 480px) {
-    .content-wrapper, .content-about, .image, .box, .label, .p, audio, .bottom-line, .bottom-left-button {
-        width: 100%; 
-        padding: 0; 
-        margin: 0; 
-        left: 0; 
-        right: 0; 
-        top: auto; 
-        bottom: auto; 
-        position: relative; 
-    }
-  
-    .content-wrapper::before {
-        display: none; 
-    }
-  
-    .content-about a, .p a, .label .deep-relaxation, .bottom-left-button {
-        font-size: smaller; 
-    }
-  
-    audio {
-        width: 100%;
-        bottom: 0; 
-    }
-  
-    .image .element, .box .ellipse {
-        width: 100%;
-        height: auto; 
-        position: relative; 
-    }
+@media only screen and (max-width: 767px) {
+
+  .image, .image .element {
+      width: 100%; 
+      height: auto;
+  }
+
+  .label .deep-relaxation {
+      font-size: 50px; 
+  }
+
+  .p {
+      font-size: 25px; 
+  }
+
+  audio {
+      width: 100%; 
+  }
+
+  .bottom-left-button {
+      width: 40px; height: 40px; /
   }
 }
-
-
-
-
-
+}

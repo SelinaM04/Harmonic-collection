@@ -110,59 +110,64 @@ body {
 
 .centered-links li {
     display: inline-block;
-    margin: 0 10px; /* Adjust spacing between items */
+    margin: 0 10px; 
 }
 
 .centered-links a {
     text-decoration: none;
-    color: black; /* Adjust link color as needed */
+    color: black; 
     font-weight: bold;
 }
 
-@media (max-width: 768px) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
     .main-content h1 {
-        font-size: 24px; 
-        padding: 0 20px; 
+        font-size: 18px; /* Adjust font size */
     }
 
     #navigation li {
-        padding: 20px 40px; 
+        padding: 40px 70px; /* Adjust padding */
+        font-size: 17px; /* Adjust font size */
     }
 
-    #navigation li:nth-child(2), 
-    #navigation li:nth-child(4), 
-    #navigation li:nth-child(5), 
-    #navigation li:nth-child(6) {
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%); 
-        top: auto; 
-        bottom: auto; 
+    .centered-links a {
+        font-size: 18px; /* Adjust font size */
     }
 
-    #navigation li:nth-child(1), #navigation li:nth-child(3), #navigation li:nth-child(7) {
-        left: 50%;
-        transform: translateX(-50%); 
-    }
+    /* Other elements can also be adjusted similarly */
 }
 
-@media (max-width: 480px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
     .main-content h1 {
-        font-size: 18px; 
+        font-size: 16px;
     }
 
     #navigation li {
-        padding: 10px 20px; 
+        padding: 35px 60px;
+        font-size: 16px;
     }
 
-    #navigation ul {
-        display: block; 
+    .centered-links a {
+        font-size: 16px;
     }
 
-    #navigation li {
-        position: static; 
-        margin-bottom: 10px; 
-        width: calc(100% - 40px); 
-        transform: none; 
-    }
+    /* Further adjustments as needed */
 }
+
+@media only screen and (max-width: 768px) {
+    .main-content h1 {
+        font-size: 14px;
+    }
+
+    #navigation li {
+        padding: 30px 50px;
+        font-size: 14px;
+    }
+
+    .centered-links a {
+        font-size: 14px;
+    }
+
+    /* Adjustments for smaller screen */
+}
+
 
