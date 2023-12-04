@@ -414,3 +414,45 @@ a {
 
 .parallax-window { background: transparent; }
 
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .navbar .navbar-nav {
+    display: block;
+    text-align: center;
+  }
+
+  .navbar .nav-item {
+    display: inline-block;
+  }
+
+  .header {
+    width: 100%;
+    position: relative;
+  }
+}
+
+@media (max-width: 768px) {
+  .tm-work-item-inner, .work-section .title {
+    text-align: center;
+  }
+
+  .work-section .col-md-6 {
+    max-width: 100%;
+  }
+
+  .map-outer {
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  h1, h2, h3, .navbar .nav-link {
+    font-size: smaller; 
+  }
+}
+
+

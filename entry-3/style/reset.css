@@ -147,3 +147,39 @@ display: inline-block;
 position: relative;
 }
 
+
+@media screen and (max-width: 768px) {
+    .sidenav {
+        width: 60%; 
+    }
+
+    .sidenav a {
+        font-size: 18px; 
+    }
+
+    .carousel-caption {
+        right: 5%;
+        left: 5%;
+    }
+
+    .line {
+        margin-left: 5%;
+        border-left: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sidenav {
+        width: 80%; 
+    }
+
+    .sidenav a {
+        font-size: 16px; 
+    }
+
+    .carousel-caption {
+        right: 2%;
+        left: 2%;
+        bottom: 30%;
+    }
+}

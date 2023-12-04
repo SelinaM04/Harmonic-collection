@@ -172,6 +172,60 @@ button[type="submit"]:hover {
     background-color: #444;
 }
 
+@media (max-width: 768px) {
+    .link-list {
+        width: 100px;
+        height: 30px;
+        position: relative;
+        box-shadow: none;
+    }
+
+    .link-list ul {
+        text-align: left;
+    }
+
+    .link-list li a {
+        padding: 10px;
+        border-bottom: 1px solid #e8e8e8;
+    }
+
+    .text-container {
+        width: 395px;
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    .text-container h1 {
+        font-size: 24px;
+    }
+
+    .text-container p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-container h1 {
+        font-size: 20px;
+    }
+
+    .text-container p {
+        font-size: 12px;
+    }
+
+    .top-left, .top-right, .bottom-left, .bottom-right {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+#backToTop {
+    display: block;
+}
+
+
+
+
 
 
 

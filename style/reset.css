@@ -194,6 +194,71 @@ audio {
     
 }
 
+@media (max-width: 768px) {
+  .content-wrapper, .content-about, .image, .box, .label, .p, audio, .bottom-line, .bottom-left-button {
+      width: 100%; 
+      padding: 0; 
+      margin: 0; 
+      left: 0; 
+      right: 0; 
+      top: auto; 
+      bottom: auto; 
+      position: relative; 
+  }
+
+  .content-wrapper::before {
+      display: none; 
+  }
+
+  .content-about a, .p a, .label .deep-relaxation, .bottom-left-button {
+      font-size: smaller; 
+  }
+
+  audio {
+      width: 100%;
+      bottom: 0; 
+  }
+
+  .image .element, .box .ellipse {
+      width: 100%;
+      height: auto; 
+      position: relative; 
+  }
+}
+
+@media (max-width: 480px) {
+  @media (max-width: 480px) {
+    .content-wrapper, .content-about, .image, .box, .label, .p, audio, .bottom-line, .bottom-left-button {
+        width: 100%; 
+        padding: 0; 
+        margin: 0; 
+        left: 0; 
+        right: 0; 
+        top: auto; 
+        bottom: auto; 
+        position: relative; 
+    }
+  
+    .content-wrapper::before {
+        display: none; 
+    }
+  
+    .content-about a, .p a, .label .deep-relaxation, .bottom-left-button {
+        font-size: smaller; 
+    }
+  
+    audio {
+        width: 100%;
+        bottom: 0; 
+    }
+  
+    .image .element, .box .ellipse {
+        width: 100%;
+        height: auto; 
+        position: relative; 
+    }
+  }
+}
 
 
 

@@ -410,11 +410,51 @@ body {
     text-align: center;
   }
   
-  @media (max-width:768px) {
-    .container .box-container{
-      padding:20px;
-    }
+
+@media (max-width: 768px) {
+  .text-container {
+      width: 100%; 
+      padding: 5px; 
+      margin: 20px 0; 
+      max-width: none; 
   }
+
+  .second-text-container, .third-text-container, .forth-text-container, 
+  .fifth-text-container, .sixth-text-container, .seventh-text-container, 
+  .eighth-text-container, .ninth-text-container, .tenth-text-container, 
+  .eleventh-text-container, .twelfth-text-container, .thirteenth-text-container, 
+  .fourteenth-text-container, .fifteenth-text-container {
+      right: auto;
+      left: auto;
+      top: auto;
+      transform: none;
+      position: relative; 
+  }
+}
+
+
+@media (max-width:768px) {
+
+  .container .heading{ 
+    top: 80px;
+  }
+  .container .box-container{
+    padding:90px;
+    top: 5px;
+  }
+}
+/* Further adjustments for very small screens */
+@media (max-width: 450px) {
+  .text-container {
+      padding: 10px; /* Even smaller padding for very small screens */
+  }
+
+  /* Adjust font sizes for smaller screens */
+  .text-container h1, .text-container p {
+      font-size: smaller; /* Adjust font size as needed */
+  }
+}
+
   
   @media (max-width:450px) {
     .container .box-container{
@@ -426,3 +466,38 @@ body {
     }
   }
 
+@media (max-width: 768px) {
+  .centered-links {
+      top: 80px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+  }
+
+  .centered-links li {
+      display: block;
+      margin: 5px 0;
+  }
+
+
+
+  .container .box-container .box .image {
+      height: 200px; 
+  }
+
+  .music-player {
+      width: 100%;
+      bottom: 0;
+  }
+
+}
+
+@media (max-width: 480px) {
+  #word1, #word2, #word3, #word4, #word5 {
+      font-size: 18px;
+      position: relative; 
+      text-align: center;
+      margin: 5px auto;
+      
+  }
+}
