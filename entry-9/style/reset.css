@@ -152,7 +152,6 @@ body, html {
         padding: 15px;
     }
 
-    /* Adjust font size for smaller screens */
     .text-container h1 {
         font-size: 24px;
     }
@@ -163,7 +162,6 @@ body, html {
 }
 
 @media (max-width: 480px) {
-    /* Further adjustments for very small screens */
     .text-container h1 {
         font-size: 20px;
     }
@@ -172,14 +170,12 @@ body, html {
         font-size: 12px;
     }
 
-    /* Adjust corners to not overlap content on small screens */
     .top-left, .top-right, .bottom-left, .bottom-right {
         width: 50px;
         height: 50px;
     }
 }
 
-/* Make sure the back-to-top button is always visible on scroll */
 #backToTop {
     display: block;
 }
